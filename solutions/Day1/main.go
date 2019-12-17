@@ -45,11 +45,13 @@ import (
 	"math"
 	"os"
 	"strconv"
+	"path/filepath"
 )
 
 func main() {
 
-	file, err := os.Open("input.txt")
+	filePath, err := filepath.Abs("../../inputs/day1.txt")
+	file, err := os.Open(filePath)
 
 	if err != nil {
 		log.Fatal(err)
